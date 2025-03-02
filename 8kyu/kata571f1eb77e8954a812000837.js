@@ -7,8 +7,6 @@
 //
 // https://www.codewars.com/kata/571f1eb77e8954a812000837
 
-animalsObj = {name:"dog",legs:4,color:"white"}
-
 function animal(obj) {
     const animalName = obj.name;
     const animalLegs = obj.legs;
@@ -16,5 +14,3 @@ function animal(obj) {
 
     return `This ${animalColor} ${animalName} has ${animalLegs} legs.`;
 }
-
-console.log(animal(animalsObj));q
