@@ -15,5 +15,17 @@
 // https://www.codewars.com/kata/54edbc7200b811e956000556
 
 function countSheeps(sheep) {
-    // TODO
+    let count = 0;
+
+    for (const item of sheep) {
+        count += (item) ? 1 : 0;
+    }
+
+    return count;
 }
+
+// Best solution
+//
+// function countSheeps(arrayOfSheeps) {
+//     return arrayOfSheeps.filter(Boolean).length;
+// }
