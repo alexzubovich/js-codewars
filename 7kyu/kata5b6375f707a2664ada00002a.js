@@ -42,5 +42,28 @@
 // https://www.codewars.com/kata/5b6375f707a2664ada00002a
 
 const whosOnline = (friends) => {
-// Your code here...
+    const result = {};
+
+    for (const friend of friends) {
+        if (friend.status === 'online') {
+            if (friend.lastActivity > 10) {
+                if (!result.away) {
+                    result.away = [];
+                }
+                result.away.push(friend.username);
+            } else {
+                if (!result.online) {
+                    result.online = [];
+                }
+                result.online.push(friend.username);
+            }
+        } else if (friend.status === 'offline') {
+            if (!result.offline) {
+                result.offline = [];
+            }
+            result.offline.push(friend.username);
+        }
+    }
+
+    return result;
 }
