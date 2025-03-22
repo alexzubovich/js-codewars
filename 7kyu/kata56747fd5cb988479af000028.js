@@ -11,6 +11,14 @@
 // https://www.codewars.com/kata/56747fd5cb988479af000028
 
 function getMiddle(s) {
-    //Code goes here!
-    return '';
+    let middle = '';
+    const middleDot = Math.floor(s.length / 2);
+
+    if (s.length % 2 === 0) {
+        middle = s.slice(middleDot-1, middleDot+1);
+    }
+    else {
+        middle = s.slice(middleDot, middleDot+1);
+    }
+    return middle;
 }
