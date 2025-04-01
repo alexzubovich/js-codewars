@@ -16,5 +16,9 @@
 // https://www.codewars.com/kata/60113ded99cef9000e309be3
 
 function separateTypes(input) {
-
+    const separatedInput = {};
+    for(i of input) {
+        (separatedInput[typeof(i)] ??= []).push(i);
+    }
+    return separatedInput;
 }
